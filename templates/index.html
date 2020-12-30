@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Queens Puzzle</title>
+</head>
+
+<body>
+
+    <div>
+        <form method='POST'>
+            <label>Choose Queens Count: </label>
+            <select name='SltQueens'>
+                <option value="4">4</option>
+                <option value="8">8</option>
+            </select>
+            <input type="submit" name="send" value="Send">
+        </form>
+    </div>
+    {% block content %}
+    {% if data != null %}
+    <div>
+        <h2>The {{data}} Queens Puzzle Result</h2>
+        {% for queens in result %}
+        <h4>No. {{ queens.solution_number }} Solution</h4>
+        {{ queens.solution | safe }}
+        {% endfor %}
+    </div>
+    {% else %}
+    <div>...</div>
+    {% endif %}
+    {% endblock content %}
+
+
+</body>
+
+</html>
