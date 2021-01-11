@@ -7,14 +7,24 @@ The user can select the different count of queens (4 or 8).  Then, the result wi
 <h5>For example. If there is a 4x4 grid and 4-queens puzzle</h5>
 Output:
 // Solution 1
+
 .Q..
+
 ...Q
+
 Q...
+
 ..Q.
 
+
+
 // Solution 2
+
 ..Q.
+
 Q...
+
 ...Q
+
 .Q..
 
